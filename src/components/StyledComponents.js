@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+//Stylings
+
 export const MixContainer = styled.div`
   display: flex;
   width: 80%;
@@ -40,7 +42,7 @@ export const StyledInput = styled.input`
   padding: 1em 0.5em;
   width: 50%;
   font-family: "Oswald", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   outline: none;
   @media (max-width: 811px) {
     margin-top: 1em;
@@ -85,7 +87,7 @@ export const StyledButton = styled.button`
   cursor: pointer;
   border: none;
   &:hover {
-    background-color: #caf0f8;
+    background-color: #fb8500;
   }
   ${(props) => {
     if (props.red)

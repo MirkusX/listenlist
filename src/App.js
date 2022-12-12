@@ -9,6 +9,7 @@ function App() {
   const [search, setSearch] = useState("-");
   const [data, setData] = useState();
   const [error, setError] = useState();
+  //Gets data
   const getData = () => {
     axios
       .get(`https://api.mixcloud.com/search/?q=${search}&type=cloudcast`)

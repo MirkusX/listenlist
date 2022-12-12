@@ -48,11 +48,13 @@ export const Frontpage = () => {
   return (
     <StyledSection>
       <OuterList>
+        {/* Shows overlay on click */}
         <StyledButton overlay onClick={() => setShow(!show)}>
           Show List
         </StyledButton>
         <NavDiv show={show}>
           <p>Your List</p>
+          {/* Lists all items user has added to list */}
           {list.map((item, index) => {
             return (
               <StyledListDiv key={index}>
@@ -68,11 +70,13 @@ export const Frontpage = () => {
         </NavDiv>
       </OuterList>
       <MixList>
+        {/* Finds data based on user input */}
         <StyledInput
           type="text"
           onChange={(e) => setSearch((search) => (search = e.target.value))}
           placeholder="type to search / see results below"
         />
+        {/* Lists all relevant data */}
         {data.map((item, index) => {
           return (
             <MixContainer key={index}>
@@ -89,6 +93,7 @@ export const Frontpage = () => {
                   <StyledA href={item.url}>Listen</StyledA>
                 </p>
               </InnerMixContainer>
+              {/* Adds data to list on click */}
               <StyledButton
                 onClick={() =>
                   setList([
