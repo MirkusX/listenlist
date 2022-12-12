@@ -5,6 +5,7 @@ import {
   MixContainer,
   MixList,
   NavDiv,
+  OuterList,
   StyledA,
   StyledButton,
   StyledImg,
@@ -43,23 +44,29 @@ export const Frontpage = () => {
 
     return `${hrs}:${padTime(mins)}:${padTime(mins)}`;
   };
+  const [show, setShow] = useState(false);
   return (
     <StyledSection>
-      <NavDiv>
-        <p>Your List</p>
-        {list.map((item, index) => {
-          return (
-            <StyledListDiv key={index}>
-              <img src={item.thumbnail} />
-              <StyledLi>{item.title}</StyledLi>
-              <StyledA href={item.link}>Listen</StyledA>
-              <StyledButton red onClick={() => removeItem(index)}>
-                Remove
-              </StyledButton>
-            </StyledListDiv>
-          );
-        })}
-      </NavDiv>
+      <OuterList>
+        <StyledButton overlay onClick={() => setShow(!show)}>
+          Show List
+        </StyledButton>
+        <NavDiv show={show}>
+          <p>Your List</p>
+          {list.map((item, index) => {
+            return (
+              <StyledListDiv key={index}>
+                <img src={item.thumbnail} />
+                <StyledLi>{item.title}</StyledLi>
+                <StyledA href={item.link}>Listen</StyledA>
+                <StyledButton red onClick={() => removeItem(index)}>
+                  Remove
+                </StyledButton>
+              </StyledListDiv>
+            );
+          })}
+        </NavDiv>
+      </OuterList>
       <MixList>
         <StyledInput
           type="text"
@@ -78,7 +85,9 @@ export const Frontpage = () => {
                   {convertTime(item.audio_length)} | <FiHeadphones />{" "}
                   {item.play_count}
                 </p>
-                <StyledA href={item.url}>Listen</StyledA>
+                <p>
+                  <StyledA href={item.url}>Listen</StyledA>
+                </p>
               </InnerMixContainer>
               <StyledButton
                 onClick={() =>

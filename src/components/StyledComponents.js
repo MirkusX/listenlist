@@ -8,13 +8,14 @@ export const MixContainer = styled.div`
   border-radius: 3px;
   gap: 1em;
   @media (max-width: 811px) {
-    width: 50%;
+    width: 100%;
   }
 `;
 
 export const StyledImg = styled.img`
   @media (max-width: 811px) {
     width: 100%;
+    height: auto;
   }
 `;
 
@@ -27,11 +28,11 @@ export const InnerMixContainer = styled.div`
 export const StyledSection = styled.section`
   display: flex;
   justify-content: center;
-  padding: 1em;
   background: #283618;
   min-height: 100vh;
   @media (max-width: 811px) {
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
   }
 `;
 
@@ -41,6 +42,9 @@ export const StyledInput = styled.input`
   font-family: "Oswald", sans-serif;
   font-size: 1.5rem;
   outline: none;
+  @media (max-width: 811px) {
+    margin-top: 1em;
+  }
 `;
 
 export const StyledA = styled.a`
@@ -53,15 +57,26 @@ export const MixList = styled.div`
   align-items: center;
   width: 100%;
   @media (max-width: 811px) {
-    width: 30%;
+    width: 100%;
   }
 `;
 
 export const NavDiv = styled.div`
-  background: blue;
+  background: #ffb703;
   height: fit-content;
   padding: 1.5em;
-  width: 20%;
+  width: 50%;
+  display: none;
+  position: absolute;
+  @media (max-width: 811px) {
+    width: 70%;
+  }
+  ${(props) => {
+    if (props.show) {
+      return `
+      display: block`;
+    }
+  }}
 `;
 
 export const StyledButton = styled.button`
@@ -78,6 +93,12 @@ export const StyledButton = styled.button`
     background: red;
     margin-left: 1em;`;
   }}
+  ${(props) => {
+    if (props.overlay)
+      return `
+    padding: 1em;
+    color: white;`;
+  }}
 `;
 
 export const StyledListDiv = styled.div`
@@ -88,4 +109,11 @@ export const StyledListDiv = styled.div`
 
 export const StyledLi = styled.li`
   list-style-type: none;
+`;
+
+export const OuterList = styled.div`
+  width: 30%;
+  @media (max-width: 811px) {
+    width: 80%;
+  }
 `;
