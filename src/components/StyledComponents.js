@@ -69,7 +69,7 @@ export const NavDiv = styled.div`
   background: #ffb703;
   height: fit-content;
   padding: 1.5em;
-  width: 70%;
+  width: 100%;
   display: none;
   position: relative;
   @media (max-width: 811px) {
