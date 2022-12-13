@@ -60,7 +60,9 @@ export const Frontpage = () => {
               <StyledListDiv key={index}>
                 <img src={item.thumbnail} />
                 <StyledLi>{item.title}</StyledLi>
-                <StyledA href={item.link}>Listen</StyledA>
+                <StyledA href={item.link} target="_blank">
+                  Listen
+                </StyledA>
                 <StyledButton red onClick={() => removeItem(index)}>
                   Remove
                 </StyledButton>
@@ -90,7 +92,9 @@ export const Frontpage = () => {
                   {item.play_count}
                 </p>
                 <p>
-                  <StyledA href={item.url}>Listen</StyledA>
+                  <StyledA href={item.url} target="_blank">
+                    Listen
+                  </StyledA>
                 </p>
               </InnerMixContainer>
               {/* Adds data to list on click */}
