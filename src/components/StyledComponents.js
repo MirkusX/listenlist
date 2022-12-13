@@ -32,9 +32,11 @@ export const StyledSection = styled.section`
   justify-content: center;
   background: #283618;
   min-height: 100vh;
+  background-size: contain;
   @media (max-width: 811px) {
     align-items: center;
     flex-direction: column;
+    justify-content: start;
   }
 `;
 
@@ -67,9 +69,9 @@ export const NavDiv = styled.div`
   background: #ffb703;
   height: fit-content;
   padding: 1.5em;
-  width: 50%;
+  width: 70%;
   display: none;
-  position: absolute;
+  position: relative;
   @media (max-width: 811px) {
     width: 70%;
   }

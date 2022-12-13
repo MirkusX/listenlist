@@ -3,3 +3,5 @@ import { createContext } from "react";
 export const DataContext = createContext();
 //Context for user input
 export const SearchContext = createContext();
+//Context for list
+export const ListContext = createContext();
