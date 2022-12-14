@@ -71,7 +71,7 @@ export const NavDiv = styled.div`
   padding: 1.5em;
   width: 100%;
   display: none;
-  position: relative;
+  position: absolute;
   max-height: 35em;
   overflow: scroll;
   @media (max-width: 811px) {
