@@ -72,8 +72,11 @@ export const NavDiv = styled.div`
   width: 100%;
   display: none;
   position: relative;
+  max-height: 35em;
+  overflow: scroll;
   @media (max-width: 811px) {
     width: 70%;
+    max-height: 15em;
   }
   ${(props) => {
     if (props.show) {
