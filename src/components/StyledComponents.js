@@ -4,27 +4,39 @@ import styled from "styled-components";
 
 export const MixContainer = styled.div`
   display: flex;
-  width: 80%;
+  width: 95%;
   margin: 1em;
   background: blue;
   border-radius: 3px;
   gap: 1em;
+  padding: 1em;
   @media (max-width: 811px) {
-    width: 100%;
+    width: 90%;
+    flex-direction: column;
   }
 `;
 
 export const StyledImg = styled.img`
   @media (max-width: 811px) {
     width: 100%;
-    height: auto;
   }
 `;
 
 export const InnerMixContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
+`;
+
+export const DescContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  @media (max-width: 811px) {
+    flex-direction: column;
+    gap: 0;
+  }
 `;
 
 export const StyledSection = styled.section`
@@ -53,6 +65,7 @@ export const StyledInput = styled.input`
 
 export const StyledA = styled.a`
   color: #fefae0;
+  font-size: 1.5rem;
 `;
 
 export const MixList = styled.div`
@@ -91,6 +104,7 @@ export const StyledButton = styled.button`
   font-family: "Oswald", sans-serif;
   cursor: pointer;
   border: none;
+  font-size: 1.5rem;
   &:hover {
     background-color: #fb8500;
   }
