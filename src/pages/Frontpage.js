@@ -29,7 +29,6 @@ export const Frontpage = () => {
     removeList.splice(index, 1);
     setList(removeList);
   };
-
   useEffect(() => {
     localStorage.setItem("m1x35", JSON.stringify(list));
   }, [list]);
